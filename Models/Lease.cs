@@ -14,7 +14,5 @@ namespace SCC_Marina.Models
         public float Rate { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-
-
     }
 }
