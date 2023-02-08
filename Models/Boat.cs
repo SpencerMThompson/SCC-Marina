@@ -12,5 +12,20 @@ namespace SCC_Marina.Models
         public string BoatLength { get; set; }
         public string Manufacturer { get; set; }
         public string Year { get; set; }
+
+        public Boat()
+        {
+
+        }
+
+        public Boat(int boatID, string registration, string boatLength, string manufacturer, string year)
+        {
+            BoatID = boatID;
+            Registration = registration;
+            BoatLength = boatLength;
+            Manufacturer = manufacturer;
+            Year = year;
+        }
+
     }
 }
