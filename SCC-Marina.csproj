@@ -237,6 +237,7 @@
     </Compile>
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
+    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DayLease.cs" />
     <Compile Include="Models\Lease.cs" />
