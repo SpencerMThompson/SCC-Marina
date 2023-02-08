@@ -240,6 +240,8 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DayLease.cs" />
     <Compile Include="Models\Lease.cs" />
+    <Compile Include="Models\PowerBoat.cs" />
+    <Compile Include="Models\SailBoat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

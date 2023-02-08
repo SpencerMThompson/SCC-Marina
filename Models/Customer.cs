@@ -12,5 +12,18 @@ namespace SCC_Marina.Models
         public string LName { get; set; }
         public string Address{ get; set; }
         public string Phone { get; set; }
+
+        public Customer()
+        {
+
+        }
+        public Customer(int customerID, string fName, string lName, string address, string phone)
+        {
+            CustomerID = customerID;
+            FName = fName;
+            LName = lName;
+            Address = address;
+            Phone = phone;
+        }
     }
 }
