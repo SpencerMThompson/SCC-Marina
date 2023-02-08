@@ -9,5 +9,14 @@ namespace SCC_Marina.Models
 
     {
         public int NumberOfDays { get; set; }
+
+        public DayLease(int numberOfDays)
+        {
+            NumberOfDays = numberOfDays;
+        }
+
+        public DayLease()
+        {
+        }
     }
 }
