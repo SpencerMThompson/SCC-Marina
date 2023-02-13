@@ -11,11 +11,7 @@ namespace SCC_Marina.Models
     {
         [Key]
         public int BoatID { get; set; }
-
-        public string BoatType { get; set; }
-
-        [Required(ErrorMessage = "Please provide the registration for your boat.")]
-        [DisplayName("Registration")]
+        public string? BoatType { get; set; }
         public string Registration { get; set; }
 
         public string BoatLength { get; set; }
