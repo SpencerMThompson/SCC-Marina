@@ -54,7 +54,7 @@ namespace SCC_Marina.Services
                 IsSuccessful = true,
                 Data = user,
                 Message = "User Logged in successfully!",
-                Code = (int)HttpStatusCode.Ok
+                Code = (int)HttpStatusCode.OK
             };
         }
     }

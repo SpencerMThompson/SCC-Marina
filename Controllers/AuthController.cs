@@ -28,7 +28,5 @@ namespace SCC_Marina.Controllers
 
             return View();
         }
-
-        public async 
     }
 }
