@@ -12,7 +12,7 @@ namespace SCC_Marina.Models
         public int BoatId { get; set; }
         public int CustomerId { get; set; }
         public int SlipId { get; set; }
-        public string? LeaseType { get; set; }
+        public string LeaseType { get; set; }
         public float Rate { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

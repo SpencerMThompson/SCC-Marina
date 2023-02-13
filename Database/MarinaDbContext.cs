@@ -1,4 +1,5 @@
 ﻿using SCC_Marina.Entities;
+using SCC_Marina.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -15,6 +16,11 @@ namespace SCC_Marina.Database
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Lease> Leases { get; set; }
+        public DbSet<Dock> Docks { get; set; }
+        public DbSet<Boat> Boats { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

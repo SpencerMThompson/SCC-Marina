@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace SCC_Marina.Models
@@ -11,7 +12,7 @@ namespace SCC_Marina.Models
         [Key]
         public int SlipID { get; set; }
 
-        [ForeignKey("DockID")]
+        //[ForeignKey("DockID")]
         public int DockID { get; set; }
 
         [Required(ErrorMessage = "Please provide the width of the slip")]
