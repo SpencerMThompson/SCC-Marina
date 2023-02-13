@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace SCC_Marina.Models
 {
     public class Slip
     {
-        public int DockID { get; set; }
-
+        [Key]
         public int SlipID { get; set; }
 
+        [ForeignKey("DockID")]
+        public int DockID { get; set; }
+
+        [Required(ErrorMessage = "Please provide the width of the slip")]
+        [DisplayName("Width")]
         public string Width { get; set; }
 
+        [Required(ErrorMessage = "Please provide the length of the slip")]
+        [DisplayName("Does the dock have electricity?")]
         public string SlipLength { get; set; }
 
         public Slip()
