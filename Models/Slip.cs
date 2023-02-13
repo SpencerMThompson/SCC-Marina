@@ -12,7 +12,6 @@ namespace SCC_Marina.Models
         [Key]
         public int SlipID { get; set; }
 
-        //[ForeignKey("DockID")]
         public int DockID { get; set; }
 
         [Required(ErrorMessage = "Please provide the width of the slip")]
