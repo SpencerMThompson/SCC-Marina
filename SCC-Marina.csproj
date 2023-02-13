@@ -244,6 +244,7 @@
     <Compile Include="Models\Lease.cs" />
     <Compile Include="Models\PowerBoat.cs" />
     <Compile Include="Models\SailBoat.cs" />
+    <Compile Include="Models\Slip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
