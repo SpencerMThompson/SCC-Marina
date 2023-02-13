@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevOne.Security.Cryptography.BCrypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.1.0.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -222,6 +225,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\MarinaDbContext.cs" />
     <Compile Include="Entities\EntityBase.cs" />
@@ -230,6 +234,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HashManager.cs" />
     <Compile Include="Migrations\202302131950214_Initial_Migration.cs" />
     <Compile Include="Migrations\202302131950214_Initial_Migration.designer.cs">
       <DependentUpon>202302131950214_Initial_Migration.cs</DependentUpon>
@@ -241,10 +246,13 @@
     <Compile Include="Models\DayLease.cs" />
     <Compile Include="Models\Dock.cs" />
     <Compile Include="Models\Lease.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PowerBoat.cs" />
+    <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\SailBoat.cs" />
     <Compile Include="Models\Slip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -286,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
