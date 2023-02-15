@@ -11,13 +11,16 @@ namespace SCC_Marina.Models
     {
         [Required(ErrorMessage = "Please provide the keel depth")]
         [DisplayName("KeelDepth")]
+        [StringLength(10, ErrorMessage = "Keel Depth can't be longer than 10 characters")]
         public string KeelDepth { get; set; }
 
         [Required(ErrorMessage = "Please list the number of sails on the boat")]
         [DisplayName("NumberOfSails")]
+        [StringLength(10, ErrorMessage = "Number of Sails can't be longer than 10 characters")]
         public string NumberOfSails { get; set; }
 
         [DisplayName("MotorType")]
+        [StringLength(25, ErrorMessage = "Motor Type can't be longer than 25 characters")]
         public string MotorType { get; set; }
 
         public SailBoat()

@@ -11,10 +11,12 @@ namespace SCC_Marina.Models
     {
         [Required(ErrorMessage = "Please provide the number of engines")]
         [DisplayName("Number Of Engines")]
+        [StringLength(10, ErrorMessage = "Number of engines can't be longer than 10 characters")]
         public string NumberOfEngines { get; set; }
 
         [Required(ErrorMessage = "Please provide the fuel type")]
         [DisplayName("Fuel Type")]
+        [StringLength(25, ErrorMessage = "Fuel Type can't be longer than 25 characters")]
         public string FuelType { get; set; }
 
         public PowerBoat()
