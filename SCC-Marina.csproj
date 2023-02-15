@@ -227,6 +227,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BoatsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DocksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\MarinaDbContext.cs" />
@@ -314,6 +315,11 @@
     <Content Include="Views\Docks\Details.cshtml" />
     <Content Include="Views\Docks\Edit.cshtml" />
     <Content Include="Views\Docks\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
