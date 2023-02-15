@@ -10,6 +10,10 @@ namespace SCC_Marina.Controllers
     {
         public ActionResult Index()
         {
+            var loggedInUser = Session["Username"];
+
+            ViewBag.Username = loggedInUser;
+
             return View();
         }
 
