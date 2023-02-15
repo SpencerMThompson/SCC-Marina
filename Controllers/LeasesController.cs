@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using SCC_Marina.Database;
 using SCC_Marina.Models;
 
-namespace SCC_Marina.Views.Lease
+namespace SCC_Marina.Controllers
 {
     public class LeasesController : Controller
     {
