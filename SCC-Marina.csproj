@@ -308,7 +308,6 @@
     <Folder Include="Data\" />
     <Folder Include="Views\Auth\" />
     <Folder Include="Views\Customer\" />
-    <Folder Include="Views\Lease\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
