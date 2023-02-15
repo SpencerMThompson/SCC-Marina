@@ -16,7 +16,7 @@ namespace SCC_Marina.Models
         public float Rate { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public Array Leases { get; set; }
+        public IEnumerable<string> Leases { get; set; }
 
 
         public Lease()
@@ -24,7 +24,7 @@ namespace SCC_Marina.Models
         }
 
 
-        public Lease(int leaseId, int boatId, int customerId, int slipId, string leaseType, float rate, DateTime startDate, DateTime endDate, Array leases)
+        public Lease(int leaseId, int boatId, int customerId, int slipId, string leaseType, float rate, DateTime startDate, DateTime endDate, IEnumerable<string> leases)
         {
             LeaseId = leaseId;
             BoatId = boatId;

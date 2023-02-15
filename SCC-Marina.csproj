@@ -239,6 +239,10 @@
     <Compile Include="Migrations\202302131950214_Initial_Migration.designer.cs">
       <DependentUpon>202302131950214_Initial_Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302151904100_MoreClasses.cs" />
+    <Compile Include="Migrations\202302151904100_MoreClasses.designer.cs">
+      <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
@@ -313,6 +317,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302131950214_Initial_Migration.resx">
       <DependentUpon>202302131950214_Initial_Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302151904100_MoreClasses.resx">
+      <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
