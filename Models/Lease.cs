@@ -23,6 +23,7 @@ namespace SCC_Marina.Models
 
         [Required(ErrorMessage = "Please provide the type of lease (Day or annual): ")]
         [DisplayName("Annual or Daily Lease")]
+        [StringLength(25, ErrorMessage = "Type of Lease can't be longer than 25 characters")]
         public string LeaseType { get; set; }
 
         [DisplayName("Rate")]

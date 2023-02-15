@@ -16,10 +16,12 @@ namespace SCC_Marina.Models
         public int DockID { get; set; }
 
         [Required(ErrorMessage = "Please provide the width of the slip")]
+        [StringLength(10, ErrorMessage = "Width can't be longer than 10 characters")]
         [DisplayName("Width of Slip")]
         public string Width { get; set; }
 
         [Required(ErrorMessage = "Please provide the length of the slip")]
+        [StringLength(10, ErrorMessage = "Length can't be longer than 10 characters")]
         [DisplayName("Length of Slip")]
         public string SlipLength { get; set; }
 
