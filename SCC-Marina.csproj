@@ -297,7 +297,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\AddCustomer.cshtml" />
     <Content Include="Views\Leases\Create.cshtml" />
     <Content Include="Views\Leases\Delete.cshtml" />
     <Content Include="Views\Leases\Details.cshtml" />
