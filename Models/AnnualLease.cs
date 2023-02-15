@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
 
 namespace SCC_Marina.Models
 {
@@ -18,7 +19,10 @@ namespace SCC_Marina.Models
         {
         }
 
+        [DisplayName("Monthly Payment Due Date")]
         public DateTime MonthlyPaymentDate { get; set; }
+
+        [DisplayName("Balance Remaining")]
         public float RemainingBalance { get; set; }
     }
 }

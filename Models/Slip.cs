@@ -16,11 +16,11 @@ namespace SCC_Marina.Models
         public int DockID { get; set; }
 
         [Required(ErrorMessage = "Please provide the width of the slip")]
-        [DisplayName("Width")]
+        [DisplayName("Width of Slip")]
         public string Width { get; set; }
 
         [Required(ErrorMessage = "Please provide the length of the slip")]
-        [DisplayName("Does the dock have electricity?")]
+        [DisplayName("Length of Slip")]
         public string SlipLength { get; set; }
 
         public Slip()
