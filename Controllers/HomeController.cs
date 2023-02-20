@@ -11,8 +11,10 @@ namespace SCC_Marina.Controllers
         public ActionResult Index()
         {
             var loggedInUser = Session["Username"];
+            var useFullName = Session["fullName"];
 
             ViewBag.Username = loggedInUser;
+            ViewBag.FullName = useFullName;
 
             return View();
         }
@@ -27,12 +29,6 @@ namespace SCC_Marina.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Login()
-        {
-            ViewBag.Message = "Your login page.";
 
             return View();
         }
