@@ -43,7 +43,7 @@ namespace SCC_Marina.Controllers
                     {
                         var loggedInUser = JsonConvert.DeserializeObject<UserModel>(JsonConvert.SerializeObject(result.Data));
                         Session["Username"] = loggedInUser.Username;
-                        Session["fullName"] = string.Format("{0}{1}", loggedInUser.FirstName, loggedInUser.LastName);
+                        Session["fullName"] = string.Format("{0} {1}", loggedInUser.FirstName, loggedInUser.LastName);
 
                         return RedirectToAction("Index", "Home");
                     }
@@ -80,6 +80,7 @@ namespace SCC_Marina.Controllers
             {
                 if(model.Password != model.ConfirmPassword)
                 {
+                    ViewBag.ErrorMessage = "Please confirm the password";
                     return View(model);
                 }
                 else
@@ -90,7 +91,7 @@ namespace SCC_Marina.Controllers
                     {
                         ViewBag.Message = result.Message;
 
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Login", "Auth");
                     }
                     else
                     {
