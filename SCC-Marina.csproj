@@ -226,7 +226,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
-    <Compile Include="Controllers\BoatsController.cs" />
+    <Compile Include="Controllers\BoatController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DocksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -314,8 +314,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\BoatView\Boat.cshtml" />
-    <Content Include="Views\BoatView\BoatHome.cshtml" />
+    <Content Include="Views\Boat\Boat.cshtml" />
+    <Content Include="Views\Boat\BoatHome.cshtml" />
     <Content Include="Views\Shared\BoatList.cshtml" />
   </ItemGroup>
   <ItemGroup>

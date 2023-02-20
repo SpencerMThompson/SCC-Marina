@@ -11,7 +11,7 @@ using SCC_Marina.Models;
 
 namespace SCC_Marina.Controllers
 {
-    public class BoatsController : Controller
+    public class BoatController : Controller
     {
         private MarinaDbContext db = new MarinaDbContext();
 
