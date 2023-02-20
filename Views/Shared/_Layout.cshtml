@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (ViewBag.Username != null)
                     {
-                        <li><a href="#">@ViewBag.Username</a></li>
+                        <li><a href="#">@ViewBag.FullName</a></li> |
                         <li>@Html.ActionLink("Logout", "LogOut", "Auth")</li>
                     }
                     else
@@ -42,7 +42,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - SCC Marina</p>
         </footer>
     </div>
 
