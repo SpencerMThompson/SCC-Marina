@@ -21,6 +21,10 @@ namespace SCC_Marina.Controllers
             return View(db.Boats.ToList());
         }
 
+        public ActionResult BoatHome()
+        {
+            return View();
+        }
         // GET: Boats/Details/5
         public ActionResult Details(int? id)
         {

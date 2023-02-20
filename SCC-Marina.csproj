@@ -314,6 +314,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\BoatView\Boat.cshtml" />
+    <Content Include="Views\BoatView\BoatHome.cshtml" />
+    <Content Include="Views\Shared\BoatList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

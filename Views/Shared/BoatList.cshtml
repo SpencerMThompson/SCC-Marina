@@ -1,0 +1,52 @@
+﻿@model SCC_Marina.Models.Boat
+
+<div>
+    <h4>Boat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BoatType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoatType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoatLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoatLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BoatID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
