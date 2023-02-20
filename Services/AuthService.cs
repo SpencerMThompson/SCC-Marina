@@ -64,10 +64,12 @@ namespace SCC_Marina.Services
 
             if (!userExists)
             {
+                var password = HashManager.HashPassword(model.Password);
+
                 var user = _dbContext.Users.Add(new Entities.User
                 {
                     Username = model.Username,
-                    Password = model.Password,
+                    Password = password,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Email = model.Email
