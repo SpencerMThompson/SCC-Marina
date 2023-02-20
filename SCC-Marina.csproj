@@ -245,6 +245,10 @@
     <Compile Include="Migrations\202302151904100_MoreClasses.designer.cs">
       <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302201908402_updatingDB.cs" />
+    <Compile Include="Migrations\202302201908402_updatingDB.Designer.cs">
+      <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
@@ -340,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302151904100_MoreClasses.resx">
       <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201908402_updatingDB.resx">
+      <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
