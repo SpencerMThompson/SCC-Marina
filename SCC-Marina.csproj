@@ -246,6 +246,10 @@
     <Compile Include="Migrations\202302151904100_MoreClasses.designer.cs">
       <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302201908402_updatingDB.cs" />
+    <Compile Include="Migrations\202302201908402_updatingDB.Designer.cs">
+      <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202302152029081_Properties.cs" />
     <Compile Include="Migrations\202302152029081_Properties.Designer.cs">
       <DependentUpon>202302152029081_Properties.cs</DependentUpon>
@@ -253,6 +257,14 @@
     <Compile Include="Migrations\202302152030084_Prop.cs" />
     <Compile Include="Migrations\202302152030084_Prop.Designer.cs">
       <DependentUpon>202302152030084_Prop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302201858367_Updates.cs" />
+    <Compile Include="Migrations\202302201858367_Updates.Designer.cs">
+      <DependentUpon>202302201858367_Updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302201936028_RegisterUpdates.cs" />
+    <Compile Include="Migrations\202302201936028_RegisterUpdates.Designer.cs">
+      <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
@@ -313,7 +325,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -335,11 +346,20 @@
     <EmbeddedResource Include="Migrations\202302151904100_MoreClasses.resx">
       <DependentUpon>202302151904100_MoreClasses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201908402_updatingDB.resx">
+      <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302152029081_Properties.resx">
       <DependentUpon>202302152029081_Properties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302152030084_Prop.resx">
       <DependentUpon>202302152030084_Prop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201858367_Updates.resx">
+      <DependentUpon>202302201858367_Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201936028_RegisterUpdates.resx">
+      <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
