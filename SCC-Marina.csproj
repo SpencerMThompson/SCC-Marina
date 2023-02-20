@@ -258,6 +258,10 @@
     <Compile Include="Migrations\202302201858367_Updates.Designer.cs">
       <DependentUpon>202302201858367_Updates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302201936028_RegisterUpdates.cs" />
+    <Compile Include="Migrations\202302201936028_RegisterUpdates.Designer.cs">
+      <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
@@ -314,13 +318,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\BoatView\Boat.cshtml" />
-    <Content Include="Views\BoatView\BoatHome.cshtml" />
-    <Content Include="Views\Shared\BoatList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -350,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302201858367_Updates.resx">
       <DependentUpon>202302201858367_Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201936028_RegisterUpdates.resx">
+      <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

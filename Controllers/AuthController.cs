@@ -43,6 +43,7 @@ namespace SCC_Marina.Controllers
                     {
                         var loggedInUser = JsonConvert.DeserializeObject<UserModel>(JsonConvert.SerializeObject(result.Data));
                         Session["Username"] = loggedInUser.Username;
+                        Session["fullName"] = string.Format("{0}{1}", loggedInUser.FirstName, loggedInUser.LastName);
 
                         return RedirectToAction("Index", "Home");
                     }
@@ -59,34 +60,44 @@ namespace SCC_Marina.Controllers
         public ActionResult LogOut()
         {
             Session["Username"] = null;
+            Session["fullName"] = null;
 
             return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult Regiter()
+        [HttpGet]
+        public ActionResult Register()
         {
             var model = new RegisterModel();
 
             return View(model);
         }
 
+        [HttpPost]
         public async Task<ActionResult> Register(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _authService.Register(model);
-
-                if (result.IsSuccessful)
+                if(model.Password != model.ConfirmPassword)
                 {
-                    ViewBag.Message = result.Message;
-
-                    return RedirectToAction("Index", "Home");
+                    return View(model);
                 }
                 else
                 {
-                    ViewBag.Message = result.Message;
+                    var result = await _authService.Register(model);
 
-                    return View(model);
+                    if (result.IsSuccessful)
+                    {
+                        ViewBag.Message = result.Message;
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ViewBag.Message = result.Message;
+
+                        return View(model);
+                    }
                 }
             }
 
