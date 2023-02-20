@@ -28,7 +28,7 @@
         {
             var password = HashManager.HashPassword("Password123");
 
-            if(context.Users.Any(i => i.Username == "firstuser@gmail.com"))
+            if(!context.Users.Any(i => i.Username == "firstuser@gmail.com"))
             {
                 context.Users.Add(new Entities.User
                 {

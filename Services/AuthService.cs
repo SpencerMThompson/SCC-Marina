@@ -34,7 +34,7 @@ namespace SCC_Marina.Services
                 return new ResultModel
                 {
                     IsSuccessful = false,
-                    Message = "Username or password is invalid!",
+                    Message = "Username is invalid!",
                     Code = (int)HttpStatusCode.Unauthorized
                 };
             }
@@ -44,7 +44,7 @@ namespace SCC_Marina.Services
                 return new ResultModel
                 {
                     IsSuccessful = false,
-                    Message = "Username or password is invalid!",
+                    Message = "Password is invalid!",
                     Code = (int)HttpStatusCode.Unauthorized
                 };
             }
@@ -56,6 +56,43 @@ namespace SCC_Marina.Services
                 Message = "User Logged in successfully!",
                 Code = (int)HttpStatusCode.OK
             };
+        }
+
+        public async Task<ResultModel> Register(RegisterModel model)
+        {
+            var userExists = _dbContext.Users.Any(u => u.Username == model.Username);
+
+            if (!userExists)
+            {
+                var user = _dbContext.Users.Add(new Entities.User
+                {
+                    Username = model.Username,
+                    Password = model.Password,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email
+                });
+                
+                await _dbContext.SaveChangesAsync();
+
+                return new ResultModel
+                {
+                    IsSuccessful = true,
+                    Data = user,
+                    Message = "User successfully registered!",
+                    Code = (int)HttpStatusCode.OK
+                };
+            }
+            else
+            {
+                return new ResultModel
+                {
+                    IsSuccessful = false,
+                    Data = null,
+                    Message = "Username already exists!",
+                    Code = (int)HttpStatusCode.BadRequest
+                };
+            }
         }
     }
 }

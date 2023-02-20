@@ -227,6 +227,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BoatsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\DocksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\MarinaDbContext.cs" />
@@ -249,6 +250,18 @@
     <Compile Include="Migrations\202302201908402_updatingDB.Designer.cs">
       <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302152029081_Properties.cs" />
+    <Compile Include="Migrations\202302152029081_Properties.Designer.cs">
+      <DependentUpon>202302152029081_Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302152030084_Prop.cs" />
+    <Compile Include="Migrations\202302152030084_Prop.Designer.cs">
+      <DependentUpon>202302152030084_Prop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302201858367_Updates.cs" />
+    <Compile Include="Migrations\202302201858367_Updates.Designer.cs">
+      <DependentUpon>202302201858367_Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
@@ -258,9 +271,11 @@
     <Compile Include="Models\Lease.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PowerBoat.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\SailBoat.cs" />
     <Compile Include="Models\Slip.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Controllers\LeasesController.cs" />
@@ -303,27 +318,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Leases\Create.cshtml" />
-    <Content Include="Views\Leases\Delete.cshtml" />
-    <Content Include="Views\Leases\Details.cshtml" />
-    <Content Include="Views\Leases\Edit.cshtml" />
-    <Content Include="Views\Leases\Index.cshtml" />
-    <Content Include="Views\Boats\Create.cshtml" />
-    <Content Include="Views\Boats\Delete.cshtml" />
-    <Content Include="Views\Boats\Details.cshtml" />
-    <Content Include="Views\Boats\Edit.cshtml" />
-    <Content Include="Views\Boats\Index.cshtml" />
-    <Content Include="Views\Docks\Create.cshtml" />
-    <Content Include="Views\Docks\Delete.cshtml" />
-    <Content Include="Views\Docks\Details.cshtml" />
-    <Content Include="Views\Docks\Edit.cshtml" />
-    <Content Include="Views\Docks\Index.cshtml" />
+    <Content Include="Views\BoatView\Boat.cshtml" />
+    <Content Include="Views\BoatView\BoatHome.cshtml" />
+    <Content Include="Views\Shared\BoatList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Data\" />
     <Folder Include="Views\Auth\" />
-    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -347,6 +348,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302201908402_updatingDB.resx">
       <DependentUpon>202302201908402_updatingDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302152029081_Properties.resx">
+      <DependentUpon>202302152029081_Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302152030084_Prop.resx">
+      <DependentUpon>202302152030084_Prop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302201858367_Updates.resx">
+      <DependentUpon>202302201858367_Updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

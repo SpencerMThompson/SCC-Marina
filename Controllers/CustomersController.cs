@@ -11,111 +11,107 @@ using SCC_Marina.Models;
 
 namespace SCC_Marina.Controllers
 {
-    public class BoatsController : Controller
+    public class CustomersController : Controller
     {
         private MarinaDbContext db = new MarinaDbContext();
 
-        // GET: Boats
+        // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Boats.ToList());
+            return View(db.Customers.ToList());
         }
 
-        public ActionResult BoatHome()
-        {
-            return View();
-        }
-        // GET: Boats/Details/5
+        // GET: Customers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Boat boat = db.Boats.Find(id);
-            if (boat == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(boat);
+            return View(customer);
         }
 
-        // GET: Boats/Create
+        // GET: Customers/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Boats/Create
+        // POST: Customers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BoatID,BoatType,Registration,BoatLength,Manufacturer,Year")] Boat boat)
+        public ActionResult Create([Bind(Include = "CustomerID,FName,LName,Address,Phone")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Boats.Add(boat);
+                db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(boat);
+            return View(customer);
         }
 
-        // GET: Boats/Edit/5
+        // GET: Customers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Boat boat = db.Boats.Find(id);
-            if (boat == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(boat);
+            return View(customer);
         }
 
-        // POST: Boats/Edit/5
+        // POST: Customers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BoatID,BoatType,Registration,BoatLength,Manufacturer,Year")] Boat boat)
+        public ActionResult Edit([Bind(Include = "CustomerID,FName,LName,Address,Phone")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(boat).State = EntityState.Modified;
+                db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(boat);
+            return View(customer);
         }
 
-        // GET: Boats/Delete/5
+        // GET: Customers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Boat boat = db.Boats.Find(id);
-            if (boat == null)
+            Customer customer = db.Customers.Find(id);
+            if (customer == null)
             {
                 return HttpNotFound();
             }
-            return View(boat);
+            return View(customer);
         }
 
-        // POST: Boats/Delete/5
+        // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Boat boat = db.Boats.Find(id);
-            db.Boats.Remove(boat);
+            Customer customer = db.Customers.Find(id);
+            db.Customers.Remove(customer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

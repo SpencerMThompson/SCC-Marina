@@ -9,7 +9,7 @@ namespace SCC_Marina.Helpers
     {
         public static string HashPassword(string input)
         {
-            string salt = "$2a$" + 13 + "$" + "/8Wncr26eAmxD1l16cAF9F8";
+            string salt = "$2a$" + 13 + "$" + "/8Wncr26eAmxD1l6cAF9F8";
             return DevOne.Security.Cryptography.BCrypt.BCryptHelper.HashPassword(input, salt);
         }
 
