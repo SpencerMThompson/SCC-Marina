@@ -22,11 +22,12 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Boats", "BoatHome", "Boats")</li>
+                    <li>@Html.ActionLink("Roles", "Role", "Auth")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (ViewBag.Username != null)
                     {
-                        <li><a href="#">@ViewBag.FullName</a></li> |
+                        <li><a href="#">@ViewBag.FullName</a> |</li> 
                         <li>@Html.ActionLink("Logout", "LogOut", "Auth")</li>
                     }
                     else

@@ -104,5 +104,37 @@ namespace SCC_Marina.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public ActionResult Role()
+        {
+            var model = new Role();
+            
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Role(Role model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _authService.Role(model);
+
+                if (result.IsSuccessful)
+                {
+                    ViewBag.Message = result.Message;
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ViewBag.Message = result.Message;
+
+                    return View(model);
+                }
+            }
+
+            return View(model);
+        }
     }
 }

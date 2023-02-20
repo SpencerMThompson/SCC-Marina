@@ -20,6 +20,8 @@ namespace SCC_Marina.Database
         public DbSet<Lease> Leases { get; set; }
         public DbSet<Dock> Docks { get; set; }
         public DbSet<Boat> Boats { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

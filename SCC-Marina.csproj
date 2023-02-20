@@ -266,6 +266,22 @@
     <Compile Include="Migrations\202302201936028_RegisterUpdates.Designer.cs">
       <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302202030466_Roles.cs" />
+    <Compile Include="Migrations\202302202030466_Roles.Designer.cs">
+      <DependentUpon>202302202030466_Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302202042117_RolesNoForeign.cs" />
+    <Compile Include="Migrations\202302202042117_RolesNoForeign.Designer.cs">
+      <DependentUpon>202302202042117_RolesNoForeign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302202046307_RolesUser.cs" />
+    <Compile Include="Migrations\202302202046307_RolesUser.Designer.cs">
+      <DependentUpon>202302202046307_RolesUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302202049253_RolesUpdateds.cs" />
+    <Compile Include="Migrations\202302202049253_RolesUpdateds.Designer.cs">
+      <DependentUpon>202302202049253_RolesUpdateds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnnualLease.cs" />
     <Compile Include="Models\Boat.cs" />
@@ -277,9 +293,11 @@
     <Compile Include="Models\PowerBoat.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\ResultModel.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SailBoat.cs" />
     <Compile Include="Models\Slip.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Controllers\LeasesController.cs" />
@@ -323,6 +341,7 @@
     <Content Include="Views\Shared\ListLease.cshtml" />
     <Content Include="Views\Auth\Register.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\Role.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +380,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302201936028_RegisterUpdates.resx">
       <DependentUpon>202302201936028_RegisterUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302202030466_Roles.resx">
+      <DependentUpon>202302202030466_Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302202042117_RolesNoForeign.resx">
+      <DependentUpon>202302202042117_RolesNoForeign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302202046307_RolesUser.resx">
+      <DependentUpon>202302202046307_RolesUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302202049253_RolesUpdateds.resx">
+      <DependentUpon>202302202049253_RolesUpdateds.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

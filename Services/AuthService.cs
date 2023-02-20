@@ -96,5 +96,39 @@ namespace SCC_Marina.Services
                 };
             }
         }
+
+        public async Task<ResultModel> Role(Role model)
+        {
+            var roleExists = _dbContext.Roles.Any(u => u.RoleName == model.RoleName);
+
+            if (!roleExists)
+            {
+                var user = _dbContext.Roles.Add(new Role
+                {
+                    RoleId = model.RoleId,
+                    RoleName = model.RoleName
+                });
+
+                await _dbContext.SaveChangesAsync();
+
+                return new ResultModel
+                {
+                    IsSuccessful = true,
+                    Data = user,
+                    Message = "Role successfully Added!",
+                    Code = (int)HttpStatusCode.OK
+                };
+            }
+            else
+            {
+                return new ResultModel
+                {
+                    IsSuccessful = false,
+                    Data = null,
+                    Message = "Role name already exists!",
+                    Code = (int)HttpStatusCode.BadRequest
+                };
+            }
+        }
     }
 }
